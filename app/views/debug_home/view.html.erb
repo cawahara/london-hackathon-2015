@@ -1,7 +1,7 @@
 <div id="header">
 <p class="navbar-text pull-right">
 <% if user_signed_in? %>
-  Logged in as <strong><%= current_user.email %></strong>.
+  Logged in as <strong><%= current_user.name %></strong> (<%= current_user.email %>).
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 <% else %>
@@ -35,16 +35,26 @@
 <p>Your events:</p>
 
 <table border>
+<tr>
+  <th>Event ID</th>
+  <th>Event Name</th>
+  <th>From</th>
+  <th>To</th>
+  <th>Attendees</th>
+</tr>
 <% @events.each do |event| %>
 <tr>
   <td><%= event.id %></td>
   <td><%= event.name %></td>
   <td><%= event.from.strftime('%b %d, %Y %H:%M') %></td>
   <td><%= event.to.strftime('%b %d, %Y %H:%M') %></td>
-  <td><%= event.user_id %></td>
   <td>
     <% event.users.each do |user| %>
-    <%= user.id %>&nbsp;
+    <% if user.id == event.user_id %>
+    <strong><%= user.name %></strong>&nbsp;
+    <% else %>
+    <%= user.name %>&nbsp;
+    <% end %>
     <% end %>
   </td>
 </tr>
