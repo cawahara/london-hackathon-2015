@@ -42,4 +42,5 @@ UserEvent.create(:user_id => 'satomi@planna.com', :event_id => 1)
 
 Tour.create(:user_id => 'taka@planna.com',
             :from => Date.strptime("2016/02/03", "%Y/%m/%d"),
-            :to => Date.strptime("2016/02/05", "%Y/%m/%d"))
+            :to => Date.strptime("2016/02/05", "%Y/%m/%d"),
+            :name => 'Kyoto tour!')
