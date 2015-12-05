@@ -1,4 +1,4 @@
-<div id="header">
+<div id="header" style="text-align: right;">
 <p class="navbar-text pull-right">
 <% if user_signed_in? %>
   Logged in as <strong><%= current_user.name %></strong> (<%= current_user.email %>).
@@ -9,6 +9,8 @@
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
 </div>
+
+<hr>
 
 <div id="main">
 
