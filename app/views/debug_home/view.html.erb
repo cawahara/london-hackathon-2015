@@ -40,7 +40,7 @@ You are <%= @user %>.
   <td><%= event.name %></td>
   <td><%= event.from.strftime('%b %d, %Y %H:%M') %></td>
   <td><%= event.to.strftime('%b %d, %Y %H:%M') %></td>
-  <td><%= event.created_by %></td>
+  <td><%= event.user_id %></td>
 </tr>
 <% end %>
 </table>

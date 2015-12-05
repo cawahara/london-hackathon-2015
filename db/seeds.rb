@@ -38,7 +38,7 @@ Event.create(:id => 1,
              :name => 'Sushi',
              :from => DateTime.strptime("2016/02/03 10:00", "%Y/%m/%d %H:%M"),
              :to => DateTime.strptime("2016/02/03 11:00", "%Y/%m/%d %H:%M"),
-             :created_by => 'taka@planna.com')
+             :user_id => 1)
 
 UserEvent.create(:user_id => 'taka@planna.com', :event_id => 1)
 UserEvent.create(:user_id => 'mitsuki@planna.com', :event_id => 1)
