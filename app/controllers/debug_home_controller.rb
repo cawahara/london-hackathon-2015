@@ -10,6 +10,9 @@ class DebugHomeController < ApplicationController
     else
       @user = 'None'
     end
+
+    @events = UserEvent.all
+
     render 'debug_home/view'
   end
 
