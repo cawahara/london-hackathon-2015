@@ -1,4 +1,16 @@
 <div id="main">
 You are <%= @user %>.
 <%= @msg %>
+
+<p>Your events:</p>
+
+<table border>
+<% @events.each do |event| %>
+<tr>
+  <td><%= event.user_id %></td>
+  <td><%= event.event_id %></td>
+</tr>
+<% end %>
+</table>
+
 </div>

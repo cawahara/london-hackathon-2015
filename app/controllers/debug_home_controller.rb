@@ -11,7 +11,7 @@ class DebugHomeController < ApplicationController
       @user = 'None'
     end
 
-    @events = UserEvent.all
+    @events = UserEvent.where(user_id: @user)
 
     render 'debug_home/view'
   end
