@@ -44,11 +44,80 @@ Event.create(:id => 1,
              :to => DateTime.strptime("2016/02/03 11:00", "%Y/%m/%d %H:%M"),
              :user_id => 1)
 
+Event.create(:id => 2,
+             :name => 'Ninja Viledge',
+             :from => DateTime.strptime("2016/02/03 18:00", "%Y/%m/%d %H:%M"),
+             :to => DateTime.strptime("2016/02/03 19:00", "%Y/%m/%d %H:%M"),
+             :user_id => 1)
+
+Event.create(:id => 3,
+             :name => 'Kyoto Tower',
+             :from => DateTime.strptime("2016/02/04 10:00", "%Y/%m/%d %H:%M"),
+             :to => DateTime.strptime("2016/02/04 11:00", "%Y/%m/%d %H:%M"),
+             :user_id => 1)
+
+Event.create(:id => 4,
+             :name => 'Nanzenji Temple',
+             :from => DateTime.strptime("2016/02/04 14:00", "%Y/%m/%d %H:%M"),
+             :to => DateTime.strptime("2016/02/04 15:00", "%Y/%m/%d %H:%M"),
+             :user_id => 1)
+
+Event.create(:id => 5,
+             :name => 'Gion',
+             :from => DateTime.strptime("2016/02/04 18:00", "%Y/%m/%d %H:%M"),
+             :to => DateTime.strptime("2016/02/04 19:00", "%Y/%m/%d %H:%M"),
+             :user_id => 1)
+
+Event.create(:id => 6,
+             :name => 'Shimogamo Shrine',
+             :from => DateTime.strptime("2016/02/05 10:00", "%Y/%m/%d %H:%M"),
+             :to => DateTime.strptime("2016/02/05 11:00", "%Y/%m/%d %H:%M"),
+             :user_id => 1)
+
+Event.create(:id => 7,
+             :name => 'Shopping@Kyoto St.',
+             :from => DateTime.strptime("2016/02/05 14:00", "%Y/%m/%d %H:%M"),
+             :to => DateTime.strptime("2016/02/05 15:00", "%Y/%m/%d %H:%M"),
+             :user_id => 1)
+
 Attendance.create(:user_id => 1, :event_id => 1)
 Attendance.create(:user_id => 2, :event_id => 1)
 Attendance.create(:user_id => 3, :event_id => 1)
+
+Attendance.create(:user_id => 1, :event_id => 2)
+Attendance.create(:user_id => 2, :event_id => 2)
+Attendance.create(:user_id => 3, :event_id => 2)
+
+Attendance.create(:user_id => 1, :event_id => 3)
+Attendance.create(:user_id => 2, :event_id => 3)
+Attendance.create(:user_id => 3, :event_id => 3)
+
+Attendance.create(:user_id => 1, :event_id => 4)
+Attendance.create(:user_id => 2, :event_id => 4)
+Attendance.create(:user_id => 3, :event_id => 4)
+
+Attendance.create(:user_id => 1, :event_id => 5)
+Attendance.create(:user_id => 2, :event_id => 5)
+Attendance.create(:user_id => 3, :event_id => 5)
+
+Attendance.create(:user_id => 1, :event_id => 6)
+Attendance.create(:user_id => 2, :event_id => 6)
+Attendance.create(:user_id => 3, :event_id => 6)
+
+Attendance.create(:user_id => 2, :event_id => 7)
+Attendance.create(:user_id => 3, :event_id => 7)
 
 Tour.create(:user_id => 1,
             :from => Date.strptime("2016/02/03", "%Y/%m/%d"),
             :to => Date.strptime("2016/02/05", "%Y/%m/%d"),
             :name => 'Kyoto tour!')
+
+Tour.create(:user_id => 2,
+            :from => Date.strptime("2016/02/03", "%Y/%m/%d"),
+            :to => Date.strptime("2016/02/05", "%Y/%m/%d"),
+            :name => 'Kyoto')
+
+Tour.create(:user_id => 3,
+            :from => Date.strptime("2016/02/03", "%Y/%m/%d"),
+            :to => Date.strptime("2016/02/05", "%Y/%m/%d"),
+            :name => 'Kyoto')
