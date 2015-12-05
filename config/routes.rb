@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
+  #Testing "root to" by cawahara
+  root to home#index
 
   # Testing catch-all route by dmikurube.
   match ':controller(/:action(/:id))', via: [ :get, :post, :patch ]
