@@ -2,6 +2,17 @@
 You are <%= @user %>.
 <%= @msg %>
 
+<p>Your tours:</p>
+
+<table border>
+<% @tours.each do |tour| %>
+<tr>
+  <td><%= tour.from.strftime('%b %d, %Y') %></td>
+  <td><%= tour.to.strftime('%b %d, %Y') %></td>
+</tr>
+<% end %>
+</table>
+
 <p>Your events:</p>
 
 <table border>
