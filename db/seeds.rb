@@ -9,6 +9,7 @@
 user_taka = User.new
 user_taka.id = 1
 user_taka.email = 'taka@planna.com'
+user_taka.name = 'Taka'
 user_taka.password = 'taka'
 user_taka.password_confirmation = 'taka'
 user_taka.save!
@@ -16,6 +17,7 @@ user_taka.save!
 user_mitsuki = User.new
 user_mitsuki.id = 2
 user_mitsuki.email = 'mitsuki@planna.com'
+user_mitsuki.name = 'Mitsuki'
 user_mitsuki.password = 'mitsuki'
 user_mitsuki.password_confirmation = 'mitsuki'
 user_mitsuki.save!
@@ -23,6 +25,7 @@ user_mitsuki.save!
 user_satomi = User.new
 user_satomi.id = 3
 user_satomi.email = 'satomi@planna.com'
+user_satomi.name = 'Satomi'
 user_satomi.password = 'satomi'
 user_satomi.password_confirmation = 'satomi'
 user_satomi.save!
@@ -30,6 +33,7 @@ user_satomi.save!
 user_dai = User.new
 user_dai.id = 4
 user_dai.email = 'dai@planna.com'
+user_dai.name = 'Dai'
 user_dai.password = 'dai'
 user_dai.password_confirmation = 'dai'
 user_dai.save!
