@@ -34,7 +34,7 @@ user_dai.password = 'dai'
 user_dai.password_confirmation = 'dai'
 user_dai.save!
 
-Event.create(:event_id => 1,
+Event.create(:id => 1,
              :name => 'Sushi',
              :from => DateTime.strptime("2016/02/03 10:00", "%Y/%m/%d %H:%M"),
              :to => DateTime.strptime("2016/02/03 11:00", "%Y/%m/%d %H:%M"),

@@ -18,7 +18,7 @@ class DebugHomeController < ApplicationController
       event_ids << user_event.event_id
     end
 
-    @events = Event.where(event_id: event_ids)
+    @events = Event.where(id: event_ids)
 
     @tours = current_user.tours
 
