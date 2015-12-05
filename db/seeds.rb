@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+UserEvent.create(:user_id => 'bar@foo.jp', :event_id => 12)
+UserEvent.create(:user_id => 'bar@foo.jp', :event_id => 14)
+UserEvent.create(:user_id => 'hoge@foo.jp', :event_id => 13)
+UserEvent.create(:user_id => 'hoge@foo.jp', :event_id => 14)
