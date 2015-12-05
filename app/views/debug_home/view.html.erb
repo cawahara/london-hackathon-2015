@@ -5,9 +5,18 @@ You are <%= @user %>.
 <p>Your tours:</p>
 
 <table border>
+<tr>
+  <th>Tour Name</th>
+  <th>From</th>
+  <th></th>
+  <th>To</th>
+</tr>
+</tr>
 <% @tours.each do |tour| %>
 <tr>
+  <th><%= tour.name %></th>
   <td><%= tour.from.strftime('%b %d, %Y') %></td>
+  <td>-</td>
   <td><%= tour.to.strftime('%b %d, %Y') %></td>
 </tr>
 <% end %>
