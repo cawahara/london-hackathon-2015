@@ -82,30 +82,24 @@ Event.create(:id => 7,
 
 Attendance.create(:user_id => 1, :event_id => 1)
 Attendance.create(:user_id => 2, :event_id => 1)
-Attendance.create(:user_id => 3, :event_id => 1)
 
 Attendance.create(:user_id => 1, :event_id => 2)
 Attendance.create(:user_id => 2, :event_id => 2)
-Attendance.create(:user_id => 3, :event_id => 2)
 
 Attendance.create(:user_id => 1, :event_id => 3)
 Attendance.create(:user_id => 2, :event_id => 3)
-Attendance.create(:user_id => 3, :event_id => 3)
 
 Attendance.create(:user_id => 1, :event_id => 4)
 Attendance.create(:user_id => 2, :event_id => 4)
-Attendance.create(:user_id => 3, :event_id => 4)
 
 Attendance.create(:user_id => 1, :event_id => 5)
 Attendance.create(:user_id => 2, :event_id => 5)
-Attendance.create(:user_id => 3, :event_id => 5)
 
 Attendance.create(:user_id => 1, :event_id => 6)
 Attendance.create(:user_id => 2, :event_id => 6)
-Attendance.create(:user_id => 3, :event_id => 6)
 
+Attendance.create(:user_id => 1, :event_id => 7)
 Attendance.create(:user_id => 2, :event_id => 7)
-Attendance.create(:user_id => 3, :event_id => 7)
 
 Tour.create(:user_id => 1,
             :from => Date.strptime("2016/02/03", "%Y/%m/%d"),
@@ -115,9 +109,4 @@ Tour.create(:user_id => 1,
 Tour.create(:user_id => 2,
             :from => Date.strptime("2016/02/03", "%Y/%m/%d"),
             :to => Date.strptime("2016/02/05", "%Y/%m/%d"),
-            :name => 'Kyoto')
-
-Tour.create(:user_id => 3,
-            :from => Date.strptime("2016/02/03", "%Y/%m/%d"),
-            :to => Date.strptime("2016/02/05", "%Y/%m/%d"),
-            :name => 'Kyoto')
+            :name => 'Japan!')
