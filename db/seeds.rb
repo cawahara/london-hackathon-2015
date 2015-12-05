@@ -6,7 +6,36 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-UserEvent.create(:user_id => 'bar@foo.jp', :event_id => 12)
-UserEvent.create(:user_id => 'bar@foo.jp', :event_id => 14)
-UserEvent.create(:user_id => 'hoge@foo.jp', :event_id => 13)
-UserEvent.create(:user_id => 'hoge@foo.jp', :event_id => 14)
+user_taka = User.new
+user_taka.email = 'taka@planna.com'
+user_taka.password = 'taka'
+user_taka.password_confirmation = 'taka'
+user_taka.save!
+
+user_mitsuki = User.new
+user_mitsuki.email = 'mitsuki@planna.com'
+user_mitsuki.password = 'mitsuki'
+user_mitsuki.password_confirmation = 'mitsuki'
+user_mitsuki.save!
+
+user_satomi = User.new
+user_satomi.email = 'satomi@planna.com'
+user_satomi.password = 'satomi'
+user_satomi.password_confirmation = 'satomi'
+user_satomi.save!
+
+user_dai = User.new
+user_dai.email = 'dai@planna.com'
+user_dai.password = 'dai'
+user_dai.password_confirmation = 'dai'
+user_dai.save!
+
+Event.create(:event_id => 1,
+             :name => 'Sushi',
+             :from => DateTime.strptime("2016/02/03 10:00", "%Y/%m/%d %H:%M"),
+             :to => DateTime.strptime("2016/02/03 11:00", "%Y/%m/%d %H:%M"),
+             :created_by => 'taka@planna.com')
+
+UserEvent.create(:user_id => 'taka@planna.com', :event_id => 1)
+UserEvent.create(:user_id => 'mitsuki@planna.com', :event_id => 1)
+UserEvent.create(:user_id => 'satomi@planna.com', :event_id => 1)
