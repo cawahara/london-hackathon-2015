@@ -1,0 +1,2 @@
+class DebugHomeController < ApplicationController
+end
