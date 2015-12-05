@@ -25,15 +25,6 @@ You are <%= @user %>.
 <p>Your events:</p>
 
 <table border>
-<% @user_events.each do |user_event| %>
-<tr>
-  <td><%= user_event.user_id %></td>
-  <td><%= user_event.event_id %></td>
-</tr>
-<% end %>
-</table>
-
-<table border>
 <% @events.each do |event| %>
 <tr>
   <td><%= event.id %></td>
@@ -41,6 +32,11 @@ You are <%= @user %>.
   <td><%= event.from.strftime('%b %d, %Y %H:%M') %></td>
   <td><%= event.to.strftime('%b %d, %Y %H:%M') %></td>
   <td><%= event.user_id %></td>
+  <td>
+    <% event.users.each do |user| %>
+    <%= user.id %>&nbsp;
+    <% end %>
+  </td>
 </tr>
 <% end %>
 </table>

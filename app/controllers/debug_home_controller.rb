@@ -11,14 +11,7 @@ class DebugHomeController < ApplicationController
       @user = 'None'
     end
 
-    @user_events = UserEvent.where(user_id: @user)
-
-    event_ids = []
-    @user_events.each do |user_event|
-      event_ids << user_event.event_id
-    end
-
-    @events = Event.where(id: event_ids)
+    @events = current_user.events
 
     @tours = current_user.tours
 

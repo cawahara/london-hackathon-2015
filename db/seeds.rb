@@ -40,9 +40,9 @@ Event.create(:id => 1,
              :to => DateTime.strptime("2016/02/03 11:00", "%Y/%m/%d %H:%M"),
              :user_id => 1)
 
-UserEvent.create(:user_id => 'taka@planna.com', :event_id => 1)
-UserEvent.create(:user_id => 'mitsuki@planna.com', :event_id => 1)
-UserEvent.create(:user_id => 'satomi@planna.com', :event_id => 1)
+Attendance.create(:user_id => 1, :event_id => 1)
+Attendance.create(:user_id => 2, :event_id => 1)
+Attendance.create(:user_id => 3, :event_id => 1)
 
 Tour.create(:user_id => 1,
             :from => Date.strptime("2016/02/03", "%Y/%m/%d"),
