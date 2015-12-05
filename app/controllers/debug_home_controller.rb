@@ -20,7 +20,7 @@ class DebugHomeController < ApplicationController
 
     @events = Event.where(event_id: event_ids)
 
-    @tours = Tour.where(user_id: @user)
+    @tours = current_user.tours
 
     render 'debug_home/view'
   end
