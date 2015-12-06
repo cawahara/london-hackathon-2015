@@ -1,0 +1,61 @@
+<div id="header" style="text-align: right;">
+<p class="navbar-text pull-right">
+<% if user_signed_in? %>
+  Logged in as <strong><%= current_user.name %></strong> (<%= current_user.email %>).
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
+</div>
+
+<hr>
+
+<div id="main">
+
+<%= form_tag(:controller => :events, :action => :create) do %>
+
+<div class="field" style="margin: 1em; padding: 0.5em; border: solid 1px;">
+  <table>
+    <tr><th><%= label :name, "Event Name" %></th><td><%= text_field_tag :name1 %></td></tr>
+    <tr><th><%= label :date, "Date" %></th><td><%= date_field_tag :date1 %></td></tr>
+    <tr><th><%= label :from, "From" %></th><td><%= time_field_tag :from1 %></td></tr>
+    <tr><th><%= label :to,   "To"   %></th><td><%= time_field_tag :to1 %></td></tr>
+  </table>
+</div>
+
+<div class="field" style="margin: 1em; padding: 0.5em; border: solid 1px;">
+  <table>
+    <tr><th><%= label :name, "Event Name" %></th><td><%= text_field_tag :name2 %></td></tr>
+    <tr><th><%= label :date, "Date" %></th><td><%= date_field_tag :date2 %></td></tr>
+    <tr><th><%= label :from, "From" %></th><td><%= time_field_tag :from2 %></td></tr>
+    <tr><th><%= label :to,   "To"   %></th><td><%= time_field_tag :to2 %></td></tr>
+  </table>
+</div>
+
+<div class="field" style="margin: 1em; padding: 0.5em; border: solid 1px;">
+  <table>
+    <tr><th><%= label :name, "Event Name" %></th><td><%= text_field_tag :name3 %></td></tr>
+    <tr><th><%= label :date, "Date" %></th><td><%= date_field_tag :date3 %></td></tr>
+    <tr><th><%= label :from, "From" %></th><td><%= time_field_tag :from3 %></td></tr>
+    <tr><th><%= label :to,   "To"   %></th><td><%= time_field_tag :to3 %></td></tr>
+  </table>
+</div>
+
+<div class="field" style="margin: 1em; padding: 0.5em; border: solid 1px;">
+  <table>
+    <tr><th><%= label :name, "Event Name" %></th><td><%= text_field_tag :name4 %></td></tr>
+    <tr><th><%= label :date, "Date" %></th><td><%= date_field_tag :date4 %></td></tr>
+    <tr><th><%= label :from, "From" %></th><td><%= time_field_tag :from4 %></td></tr>
+    <tr><th><%= label :to,   "To"   %></th><td><%= time_field_tag :to4 %></td></tr>
+  </table>
+</div>
+
+<div class="actions">
+  <%= submit_tag "Create!" %>
+</div>
+
+<% end %>
+
+</div>

@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   #Testing "root to" by cawahara
   #root to home#index
 
+  resources :events, :path => 'events'
+
   # Testing catch-all route by dmikurube.
   match ':controller(/:action(/:id))', via: [ :get, :post, :patch ]
 
