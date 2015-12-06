@@ -50,7 +50,7 @@ class EventsController < ApplicationController
       attendance.save
     end
 
-    redirect_to '/debug_home/view', notice: 'Created a new event.'
+    redirect_to '/', notice: 'Created a new event.'
 
   end
 
