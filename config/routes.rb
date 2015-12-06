@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
-  #Testing "root to" by cawahara
-  #root to home#index
+
+  # Root!
+  root :to => 'home#index'
 
   resources :events, :path => 'events'
 
