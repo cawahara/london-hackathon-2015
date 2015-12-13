@@ -10,11 +10,11 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
 <link rel="shortcut icon" href="">
 dell on 14 dec 2015-->
-<a href="#">PLANNA</a><br/>
-<button type="button">Logout</button><br/>
-<a href="/events/new">Add new events</a><br/>
-<a href="/invite/invite">Invite</a><br/>
-
+<a href="#">PLANNA</a> |
+<a rel="nofollow" data-method="delete" href="/users/sign_out">Logout</a> |
+<a href="/events/new">Add New Events</a> |
+<a href="/invite/invite">Invite</a>
+<p>1. Tour Info</p>
 <table border>
   <tr>
     <th>Tour Name</th>
@@ -32,9 +32,9 @@ dell on 14 dec 2015-->
       </tr>
   <% end %>
 </table>
-
+<p>2. Tour Dtail</p>
       <%= form_tag(:controller => :invite, :action => :invite) do %>
-      <table class="table">
+      <table class="table" border>
         <thead>
           <tr>
             <th>Date</th>
@@ -67,8 +67,6 @@ dell on 14 dec 2015-->
             </td>
           </tr>
           <% end %>
-          <td>
-          </td>
         </tbody>
       </table>
       <% end %>
