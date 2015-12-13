@@ -15,29 +15,60 @@ dell on 14 dec 2015-->
 <a href="/events/new">Add new events</a><br/>
 <a href="/invite/invite">Invite</a><br/>
 
+<table border>
+  <tr>
+    <th>Tour Name</th>
+    <th>From</th>
+    <th></th>
+    <th>To</th>
+  </tr>
+  </tr>
+  <% @tours.each do |tour| %>
+      <tr>
+        <th><%= tour.name %></th>
+        <td><%= tour.from.strftime('%b %d, %Y') %></td>
+        <td>-</td>
+        <td><%= tour.to.strftime('%b %d, %Y') %></td>
+      </tr>
+  <% end %>
+</table>
+
       <%= form_tag(:controller => :invite, :action => :invite) do %>
       <table class="table">
         <thead>
           <tr>
-            <th>Check</th>
             <th>Date</th>
             <th>Events</th>
+            <th>Participants</th>
           </tr>
         </thead>
         <tbody>
           <% @events.each do |date, day_events| %>
           <tr>
 
-            <td>[]</td>
             <td><%= date.strftime('%b %d') %></td>
             <td>
               <% day_events.each do |event| %>
                   <!-- <span class="glyphicon glyphicon-user"></span> -->
-                  <%= event.from.strftime('%H:%M') %>-<%= event.to.strftime('%H:%M') %> <%=event.name %> <br />
+                  <input type="checkbox" /><%= event.from.strftime('%H:%M') %>-<%= event.to.strftime('%H:%M') %> <%=event.name %> <br />
+              <% end %>
+            </td>
+            <td>
+            <% day_events.each do |event| %>
+                  <% event.users.each do |user| %>
+                      <% if user.id == event.user_id %>
+                          <strong><%= user.name %></strong>&nbsp;
+                      <% else %>
+                          <%= user.name %>&nbsp;
+                      <% end %>
+                  <% end %>
+                  <br />
               <% end %>
             </td>
           </tr>
           <% end %>
+          <td>
+          </td>
         </tbody>
       </table>
       <% end %>
